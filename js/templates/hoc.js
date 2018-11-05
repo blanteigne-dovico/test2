@@ -1,0 +1,5 @@
+const NAMEHERE = (OldComponent) => {
+  HOC_CONTENT
+}
+
+EXPORT_STATEMENT THE_EXPORT;

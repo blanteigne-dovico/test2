@@ -1,0 +1,32 @@
+{
+  "name": "dovico-app",
+  "version": "1.0.0",
+  "description": "A CLI to create standard Dovico applications",
+  "main": "index.js",
+  "author": "Benoit Lanteigne",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@octokit/rest": "^15.15.1",
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^4.0.0",
+    "deepmerge": "^2.2.1",
+    "fast-json-patch": "^2.0.7",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.0",
+    "json-patch-gen": "^1.0.2",
+    "lodash": "^4.17.11",
+    "minimist": "^1.2.0",
+    "ncp": "^2.0.0",
+    "simple-git": "^1.106.0",
+    "touch": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dovico-app": "./index.js"
+  }
+}

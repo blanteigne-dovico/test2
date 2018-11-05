@@ -1,0 +1,84 @@
+{
+  "name": "1.0.0",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-css-modules": "^1.1.0",
+    "jest-enzyme": "^7.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prettier": "^1.14.3",
+    "react-test-renderer": "^16.6.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config webpack.dev.js --open",
+    "build-dev": "webpack --mode development --config webpack.dev.js",
+    "build-prod": "webpack --mode production --config webpack.prod.js",
+    "lint": "eslint",
+    "unit-test": "jest tests/unit/.*\\.test\\.js --coverage",
+    "integration-test": "jest tests/integration/.*\\.test\\.js --collectCoverageFrom=src --coverage",
+    "update-snapshots": "jest jest tests/.*\\.test\\.js -- updateSnapshot"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.3.2",
+    "lodash": "^4.17.11",
+    "mobx": "^5.5.2",
+    "mobx-react": "^5.3.6",
+    "moment-js": "^1.1.15",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>\\donottouch-dovico-app-webpack-config\\fileTransformer.js",
+      "\\.(css|less|cssm)$": "identity-obj-proxy"
+    }
+  }
+}
